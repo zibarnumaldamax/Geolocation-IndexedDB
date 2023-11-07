@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Геолокация и Хранилища</title>
+        <style></style>
+    </head>
+    <body>
+        <h1>Геолокация и Хранилища</h1>
+        <button onclick="getLocation()">Определить местоположение</button>
+        <div id="coordinates"></div>
+        <div>
+            <textarea id="comment" placeholder="Введите комментарий"></textarea>
+            <button onclick="saveData()">Сохранить данные</button>
+        </div>
+        <div id="commentList">
+            <h2>Сохраненные комментарии:</h2>
+        </div>
+    
+        <script src="IndexedDB.js"></script>
+    </body>
+</html>
