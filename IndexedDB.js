@@ -69,3 +69,17 @@ function displayComments() {
         }
     };
 }
+
+function clearDatabase() {
+    var request = indexedDB.deleteDatabase('commentsDB');
+
+    request.onerror = function(event) {
+        console.log("Ошибка при удалении базы данных");
+    };
+
+    request.onsuccess = function(event) {
+        console.log("База данных успешно удалена");
+    };
+
+    commentList.innerHTML = "<h2>Сохраненные комментарии:</h2>";
+}
